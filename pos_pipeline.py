@@ -9,9 +9,9 @@ sales_payments = ['SalesPayment_locationid_'+ i + '.csv' for i in days]
 sales_details = ['SalesDetails_locationid_'+ i + '.csv' for i in days]
 
 # using glob instead
-sales_dir = '/Users/jiarongchua92/POS/Sales'
-sales_pmt_dir = '/Users/jiarongchua92/POS/SalesPayments'
-sales_details_dir = '/Users/jiarongchua92/POS/SalesDetails'
+sales_dir = '~/POS/Sales'
+sales_pmt_dir = '~/POS/SalesPayments'
+sales_details_dir = '~/POS/SalesDetails'
 
 sales_csv = sorted(glob.glob(os.path.join(sales_dir, '*.csv')))
 sales_pmt_csv = sorted(glob.glob(os.path.join(sales_pmt_dir, '*.csv')))
@@ -34,7 +34,7 @@ sales_pmt_df = read_csv(sales_pmt_csv)
 sales_details_df = read_csv(sales_details_csv)
 
 # read in Employee file
-employees = pd.read_csv('/Users/jiarongchua92/POS/Employees.csv', usecols = ['First Name', 'POSID'])
+employees = pd.read_csv('~/POS/Employees.csv', usecols = ['First Name', 'POSID'])
 
 # combine csv files
 df_comb = []
